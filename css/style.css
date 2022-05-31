@@ -10768,7 +10768,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("/img/background1.svg");
+  background: url("../img/background2.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10800,6 +10800,7 @@ body {
   position: relative;
   height: 265px;
   margin: 1rem 2rem;
+  z-index: 4;
 }
 .profile-card .header-card .mail {
   position: absolute;
@@ -10829,7 +10830,7 @@ body {
 .profile-card .header-card .hamburger-menu .menu:hover {
   opacity: 1;
 }
-.profile-card .header-card .main {
+.profile-card .header-card .main-header {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -10841,7 +10842,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.profile-card .header-card .main .image {
+.profile-card .header-card .main-header .image {
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -10852,7 +10853,7 @@ body {
   z-index: 3;
   overflow: hidden;
 }
-.profile-card .header-card .main .image .hover {
+.profile-card .header-card .main-header .image .hover {
   font-size: 1.8em;
   background-color: rgba(79, 172, 254, 0.7);
   opacity: 0;
@@ -10864,17 +10865,17 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.profile-card .header-card .main .image .hover:hover {
+.profile-card .header-card .main-header .image .hover:hover {
   opacity: 1;
 }
-.profile-card .header-card .main .name {
+.profile-card .header-card .main-header .name {
   font-size: 1.2rem;
   color: #fff;
   line-height: 1;
   font-weight: 500;
   margin: 5px 0;
 }
-.profile-card .header-card .main .sub-name {
+.profile-card .header-card .main-header .sub-name {
   font-family: "Cutive Mono", monospace;
   font-size: 1.2rem;
   color: #fff;
@@ -10884,14 +10885,13 @@ body {
   display: flex;
 }
 .profile-card .header-menu {
-  z-index: 3;
-  display: flex;
+  display: none;
   height: 265px;
   position: absolute;
-  top: 0;
-  width: 100%;
+  background-color: #01260E;
 }
 .profile-card .header-menu .list-conteiner {
+  z-index: 3;
   margin: 0 auto;
   width: 30%;
   height: 100%;
