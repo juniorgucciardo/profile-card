@@ -10768,15 +10768,23 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: url("/img/background2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
 }
 
 .profile-card {
   position: relative;
-  width: 400px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+  width: 600px;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .profile-card::before {
   content: "";
@@ -10872,6 +10880,38 @@ body {
   color: #fff;
   opacity: 0.8;
 }
+.profile-card .header-card .main {
+  display: flex;
+}
+.profile-card .header-menu {
+  z-index: 3;
+  display: flex;
+  height: 265px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.profile-card .header-menu .list-conteiner {
+  margin: 0 auto;
+  width: 30%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.profile-card .header-menu .list-conteiner ul {
+  padding: 7px 0;
+  width: 80%;
+  border: 2px solid #4facfe;
+  border-radius: 18px;
+  margin-right: 3px;
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
 .profile-card .content {
   display: flex;
   padding: 1.7rem 2.5rem 2.6rem 2.5rem;
@@ -10879,7 +10919,7 @@ body {
 }
 .profile-card .content .left .about-container .title {
   position: relative;
-  color: #353535;
+  color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
   padding: 0 0 3px 0;
@@ -10897,7 +10937,7 @@ body {
   left: 0;
 }
 .profile-card .content .left .about-container .text {
-  color: #666;
+  color: #fff;
   font-weight: 300;
   line-height: 1.7rem;
 }
@@ -10906,13 +10946,13 @@ body {
 }
 .profile-card .content .left .icons-container .icon {
   text-decoration: none;
-  color: #c4c4c4;
+  color: #4facfe;
   margin-right: 8px;
   font-size: 1.3rem;
   transition: 0.3s;
 }
 .profile-card .content .left .icons-container .icon:hover {
-  color: #4facfe;
+  color: #353535;
 }
 .profile-card .content .left .buttons-container {
   display: flex;
@@ -10954,7 +10994,7 @@ body {
 }
 .profile-card .content .left .buttons-container .share-button .share {
   text-align: center;
-  color: #4facfe;
+  color: #fff;
   text-decoration: none;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -10974,12 +11014,12 @@ body {
 .profile-card .content .right .number-circle .number {
   font-size: 2.1rem;
   font-weight: 200;
-  color: #666;
+  color: #353535;
   line-height: 1.2;
 }
 .profile-card .content .right .number-circle .number-title {
   font-size: 0.55rem;
-  color: #333;
+  color: #fff;
   margin: 0 0 3px 0;
   font-weight: 400;
   line-height: 1;
@@ -10988,13 +11028,28 @@ body {
 .profile-card .content::before {
   content: "Junior";
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 0%;
   font-size: 7.3rem;
   font-weight: 800;
   z-index: 0;
   opacity: 0.1;
   color: #0D0D0D;
+}
+
+@media (max-width: 640px) {
+  .canva {
+    position: relative;
+  }
+
+  .profile-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
