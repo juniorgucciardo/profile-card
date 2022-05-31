@@ -31,15 +31,27 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: url('/img/background2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
 }
 
 .profile-card{
     position: relative;
-    width: 400px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    //background-color: #fff;
+    //border-radius: 5px;
+    //box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    //glassmorphism
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 
     &::before{
         content: '';
@@ -153,6 +165,27 @@ body{
 
     }
 
+    .header-card{
+        display: none;
+    }
+
+    .header-menu{
+        z-index: 3;
+        display: flex;
+        height: 265px;
+        position: relative;
+
+        .list-conteiner{
+            margin: 0 auto;
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }   
+
     .content{
 
         display: flex;
@@ -163,7 +196,8 @@ body{
             .about-container{
                 .title{
                     position: relative;
-                    color: rgb(53, 53, 53);
+                    //color: rgb(53, 53, 53);
+                    color: #fff;
                     font-weight: 500;
                     font-size: 1.1rem;
                     padding: 0 0 3px 0;
@@ -183,7 +217,8 @@ body{
                 }
 
                 .text{
-                    color: #666;
+                    //color: #666;
+                    color: #fff;
                     font-weight: 300;
                     line-height: 1.7rem;
                 }
@@ -194,13 +229,13 @@ body{
 
                 .icon{
                     text-decoration: none;
-                    color: #c4c4c4;
+                    color: #4facfe;
                     margin-right: 8px;
                     font-size: 1.3rem;
                     transition: .3s;
 
                     &:hover{
-                        color: #4facfe;
+                        color: #3f3f3f; 
                     }
                 }
             }
@@ -250,7 +285,8 @@ body{
 
                     .share{
                         text-align: center;
-                        color: #4facfe;
+                        //color: #4facfe;
+                        color: #fff;
                         text-decoration: none;
                         font-size: .7rem;
                         text-transform: uppercase;
@@ -278,14 +314,15 @@ body{
                 .number{
                     font-size: 2.1rem;
                     font-weight: 200;
-                    color: #666;
+                    color: #3f3f3f;
                     line-height: 1.2;
     
                 }
 
                 .number-title{
                     font-size: .55rem;
-                    color: #333;
+                    //color: #333;
+                    color: #fff;
                     margin: 0 0 3px 0;
                     font-weight: 400;
                     line-height: 1;
@@ -297,7 +334,7 @@ body{
         &::before{
             content: 'Junior';
             position: absolute;
-            top: 45%;
+            top:50%;
             left: 0%;
             font-size: 7.3rem;
             font-weight: 800;
